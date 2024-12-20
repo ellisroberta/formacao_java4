@@ -5,21 +5,24 @@ O sistema permite filtrar, ordenar e agrupar transações, demonstrando o uso ef
 
 ## Funcionalidades
 
-- **Filtrar Transações**: Possui a capacidade de filtrar transações por tipo (depósito ou saque).
-- **Ordenar Transações**: Permite ordenar as transações com base no valor.
-- **Agrupar Transações**: Agrupa as transações por tipo, facilitando a análise.
+- **Filtrar Transações**: Capacidade de filtrar transações por tipo (depósito ou saque).
+- **Ordenar Transações**: Ordenação das transações com base no valor.
+- **Agrupar Transações**: Agrupamento das transações por tipo, facilitando a análise.
 
 ## Tecnologias
 
-- Java 17
-- IDE de sua escolha (Eclipse, IntelliJ, NetBeans, etc.)
+- **Java 17**: [Download do JDK 17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
+- **IDE de sua escolha**: (Eclipse, IntelliJ, NetBeans, etc.)
 
 ## Estrutura do Projeto
 
 O projeto contém duas classes principais:
 
 1. **Transacao**: Representa uma transação bancária com atributos como `id`, `tipo`, `valor` e `data`.
+    - Exemplo de Método: `toString` para representar a transação como string.
+
 2. **Program**: Classe que contém o método `main`, onde as transações são criadas e processadas utilizando Streams.
+    - Exemplo de Método: `main` para a execução do programa.
 
 ### Classe Transacao
 
@@ -48,7 +51,7 @@ public class Program {
 1. Clone o repositório ou baixe os arquivos.
 2. Abra o projeto em sua IDE favorita.
 3. Certifique-se de que está usando o JDK 17.
-4. Compile e execute a classe Main.
+4. Compile e execute a classe `Program` (ou use o comando `java Program` na linha de comando).
 
 ## Exemplo de Saída
 - Ao executar o programa, você verá uma saída semelhante a:
@@ -74,7 +77,9 @@ SAQUE:
 Transacao{id='2', tipo='SAQUE', valor=200.00, data=2023-10-02}
 Transacao{id='4', tipo='SAQUE', valor=150.00, data=2023-10-04}`
 
-##### Este projeto é apenas um exemplo didático para demonstrar o uso de Streams no Java. Sinta-se à vontade para melhorar e expandir o sistema conforme necessário.
+##### Observações
+- Este projeto é apenas um exemplo didático para demonstrar o uso de Streams no Java.
+Sinta-se à vontade para melhorar e expandir o sistema conforme necessário.
 
 ##### Comentários sobre Expressões Lambda
 
