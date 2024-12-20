@@ -10,6 +10,7 @@ public class Transacao {
     private BigDecimal valor;
     private LocalDate data;
 
+    // Construtor da classe Transacao
     public Transacao(String id, String tipo, BigDecimal valor, LocalDate data) {
         this.id = id;
         this.tipo = tipo;
@@ -17,7 +18,7 @@ public class Transacao {
         this.data = data;
     }
 
-    // Getters
+    // Métodos getters para acessar os atributos
     public String getId() {
         return id;
     }
@@ -34,6 +35,7 @@ public class Transacao {
         return data;
     }
 
+    // Método para representar a transação em formato de string
     @Override
     public String toString() {
         return "Transacao{" +
