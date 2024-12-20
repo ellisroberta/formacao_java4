@@ -1,8 +1,75 @@
-# Processamento de Transações Bancárias com Streams
-Crie um sistema que processe transações bancárias utilizando Streams do Java.
+# Processamento de Transações Bancárias
 
-**Saída Esperada:**
-- Classe Transacao com atributos relevantes.
-- Métodos que utilizam Streams para filtrar, ordenar e agrupar transações.
-- Exemplo de uso em um main.
+Este projeto é um sistema simples para processar transações bancárias utilizando Java 17 e a API de Streams.
+O sistema permite filtrar, ordenar e agrupar transações, demonstrando o uso eficiente de Streams no Java.
 
+## Funcionalidades
+
+- **Filtrar Transações**: Possui a capacidade de filtrar transações por tipo (depósito ou saque).
+- **Ordenar Transações**: Permite ordenar as transações com base no valor.
+- **Agrupar Transações**: Agrupa as transações por tipo, facilitando a análise.
+
+## Tecnologias
+
+- Java 17
+- IDE de sua escolha (Eclipse, IntelliJ, NetBeans, etc.)
+
+## Estrutura do Projeto
+
+O projeto contém duas classes principais:
+
+1. **Transacao**: Representa uma transação bancária com atributos como `id`, `tipo`, `valor` e `data`.
+2. **Program**: Classe que contém o método `main`, onde as transações são criadas e processadas utilizando Streams.
+
+### Classe Transacao
+
+```java
+public class Transacao {
+    private String id;
+    private String tipo; // "DEPOSITO" ou "SAQUE"
+    private BigDecimal valor;
+    private LocalDate data;
+
+    // Construtor e métodos getters
+}
+```
+
+### Classe Program
+
+```java
+public class Program {
+    public static void main(String[] args) {
+        // Criação e processamento das transações
+    }
+}
+```
+
+## Como Executar
+1. Clone o repositório ou baixe os arquivos.
+2. Abra o projeto em sua IDE favorita.
+3. Certifique-se de que está usando o JDK 17.
+4. Compile e execute a classe Main.
+
+## Exemplo de Saída
+- Ao executar o programa, você verá uma saída semelhante a:
+
+`Transações de Depósito:
+Transacao{id='1', tipo='DEPOSITO', valor=1500.00, data=2023-10-01}
+Transacao{id='3', tipo='DEPOSITO', valor=800.00, data=2023-10-03}
+Transacao{id='5', tipo='DEPOSITO', valor=1200.00, data=2023-10-05}`
+
+`Transações Ordenadas por Valor:
+Transacao{id='4', tipo='SAQUE', valor=150.00, data=2023-10-04}
+Transacao{id='2', tipo='SAQUE', valor=200.00, data=2023-10-02}
+Transacao{id='3', tipo='DEPOSITO', valor=800.00, data=2023-10-03}
+Transacao{id='5', tipo='DEPOSITO', valor=1200.00, data=2023-10-05}
+Transacao{id='1', tipo='DEPOSITO', valor=1500.00, data=2023-10-01}`
+
+`Transações Agrupadas por Tipo:
+DEPOSITO:
+Transacao{id='1', tipo='DEPOSITO', valor=1500.00, data=2023-10-01}
+Transacao{id='3', tipo='DEPOSITO', valor=800.00, data=2023-10-03}
+Transacao{id='5', tipo='DEPOSITO', valor=1200.00, data=2023-10-05}
+SAQUE:
+Transacao{id='2', tipo='SAQUE', valor=200.00, data=2023-10-02}
+Transacao{id='4', tipo='SAQUE', valor=150.00, data=2023-10-04}`
